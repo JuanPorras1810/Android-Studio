@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UsoSpinner3235588</string>
+    
+    <string-array name="SpServicios">
+        <item>Seleccione...</item>
+        <item>Lavado basico</item>
+        <item>Lavado y planchado</item>
+        <item>Lavado en seco</item>
+    </string-array>
+
+
+</resources>

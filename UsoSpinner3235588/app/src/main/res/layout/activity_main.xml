@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/BtnEjercicio7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009E0B"
+        android:text="Ejercicio 7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio8"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio8"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio6"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="Ejercicio 8"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio7"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="INDEX"
+        android:textColor="#4CAF50"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnEjercicio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:backgroundTint="#009E0B"
+        android:onClick="IrEjercicio1"
+        android:text="Ejercicio 1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio2"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="Ejercicio 2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio3"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio1"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009E0B"
+        android:text="Ejercicio 3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio4"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio2"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="Ejercicio 4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio5"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio3"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009E0B"
+        android:text="Ejercicio 5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio6"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio4"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio4"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/BtnEjercicio6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="Ejercicio 6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEjercicio7"
+        app:layout_constraintStart_toStartOf="@+id/BtnEjercicio5"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEjercicio5"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

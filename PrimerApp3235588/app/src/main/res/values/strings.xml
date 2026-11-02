@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PrimerApp3235588</string>
+
+    <string-array name="SpOperaciones">
+        <item>Seleccione...</item>
+        <item>Sumar</item>
+        <item>Restar</item>
+        <item>Multiplicar</item>
+        <item>Dividir</item>
+    </string-array>
+
 </resources>

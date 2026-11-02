@@ -1,11 +1,60 @@
 <resources>
     <string name="app_name">UsoSpinner3235588</string>
-    
+
     <string-array name="SpServicios">
         <item>Seleccione...</item>
         <item>Lavado basico</item>
         <item>Lavado y planchado</item>
         <item>Lavado en seco</item>
+    </string-array>
+
+    <string-array name="SpHabitacion">
+        <item>Seleccione...</item>
+        <item>Sencilla</item>
+        <item>Doble</item>
+        <item>Familiar</item>
+    </string-array>
+
+    <string-array name="SpVehiculo">
+        <item>Seleccione...</item>
+        <item>Motocicleta</item>
+        <item>Automóvil</item>
+        <item>Camioneta</item>
+    </string-array>
+
+    <string-array name="SpModalidad">
+        <item>Seleccione...</item>
+        <item>Virtual</item>
+        <item>Presencial</item>
+        <item>Semipresencial</item>
+    </string-array>
+
+    <string-array name="SpPintura">
+        <item>Seleccione...</item>
+        <item>Economica</item>
+        <item>Lavable</item>
+        <item>Premium</item>
+    </string-array>
+
+    <string-array name="SpTransporte">
+        <item>Seleccione...</item>
+        <item>Motocicleta</item>
+        <item>Automovil</item>
+        <item>Camioneta</item>
+    </string-array>
+
+    <string-array name="SpMenu">
+        <item>Seleccione...</item>
+        <item>Basico</item>
+        <item>Ejecutivo</item>
+        <item>Especial</item>
+    </string-array>
+
+    <string-array name="SpDestino">
+        <item>Seleccione...</item>
+        <item>Local</item>
+        <item>Nacional</item>
+        <item>Internacional</item>
     </string-array>
 
 

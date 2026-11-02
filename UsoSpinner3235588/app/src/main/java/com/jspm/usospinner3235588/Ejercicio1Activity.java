@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,12 +36,12 @@ public class Ejercicio1Activity extends AppCompatActivity {
 
         // Enlace con el activity
 
-        TxtCantidadRopa = findViewById(R.id.TxtCantRopaEjer1);
+        TxtCantidadRopa = findViewById(R.id.TxtCanRopaEjer1);
         TxtSubtotal = findViewById(R.id.TxtSubtEjer1);
         TxtDescuento = findViewById(R.id.TxtDescEjer1);
         TxtRecargo = findViewById(R.id.TxtRecaEjer1);
         TxtTotal = findViewById(R.id.TxtTotalEjer1);
-        SpTipoServicio = findViewById(R.id.SpTipServEjer1);
+        SpTipoServicio = findViewById(R.id.SpServEjer1);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -58,11 +59,26 @@ public class Ejercicio1Activity extends AppCompatActivity {
         }
     }
 
+    public void Limpiar(){
+        TxtSubtotal.setText(null);
+        TxtDescuento.setText(null);
+        TxtRecargo.setText(null);
+        TxtTotal.setText(null);
+        Subtotal = 0;
+        Descuento = 0;
+        Recargo = 0;
+        Total = 0;
+    }
+
     public void Calcular(View view){
+        Limpiar();
         Capturar();
 
-        if (CantidadRopa < 0 || CantidadRopa > 20 ) {
-            TxtCantidadRopa.setError("Error, solo permite un maximo de 20 kg");
+        if (CantidadRopa > 20 ){
+            TxtCantidadRopa.setError("Error, solo permite un maximo de 20 Kg");
+            return;
+        } else if (CantidadRopa <= 0) {
+            TxtCantidadRopa.setError("Error, Debe ser un peso mayor a cero");
             return;
         }
 
@@ -84,6 +100,9 @@ public class Ejercicio1Activity extends AppCompatActivity {
                 Recargo = Subtotal * 0.15;
             }
         }else {
+            Toast.makeText(this,
+                    "Seleccione un tipo de servicio",
+                    Toast.LENGTH_SHORT).show();
             return;
         }
 

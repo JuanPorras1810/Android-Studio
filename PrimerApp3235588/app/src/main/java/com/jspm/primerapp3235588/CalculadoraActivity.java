@@ -32,7 +32,7 @@ public class CalculadoraActivity extends AppCompatActivity {
 
         TxtNumero1 = findViewById(R.id.TxtNum1Calc);
         TxtNumero2 = findViewById(R.id.TxtNum2Calc);
-        TxtResultado = findViewById(R.id.TxtResulCalc);
+        TxtResultado = findViewById(R.id.TxtResulEjer7);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

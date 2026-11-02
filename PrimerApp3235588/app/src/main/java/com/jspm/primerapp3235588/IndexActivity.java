@@ -48,4 +48,20 @@ public class IndexActivity extends AppCompatActivity {
         startActivity(Ejercicio4);
     }
 
+    public void IrEjercicio5(View view){
+        Intent Ejercicio5 = new Intent(IndexActivity.this,Ejercicio5Activity.class);
+        startActivity(Ejercicio5);
+    }
+
+    public void IrEjercicio6(View view){
+        Intent Ejercicio6 = new Intent(IndexActivity.this,Ejercicio6Activity.class);
+        startActivity(Ejercicio6);
+    }
+
+    public void IrEjercicio7(View view){
+        Intent Ejercicio7 = new Intent(IndexActivity.this,Ejercicio7Activity.class);
+        startActivity(Ejercicio7);
+    }
+
+
 }

@@ -69,7 +69,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/TxtResulCalc"
+        android:id="@+id/TxtResulEjer7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
@@ -78,7 +78,7 @@
         android:inputType="number"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/BtnRegresarEjer7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,12 +133,12 @@
         android:onClick="Multiplicar"
         android:text="Multiplicar"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/TxtResulCalc"
+        app:layout_constraintBottom_toTopOf="@+id/TxtResulEjer7"
         app:layout_constraintEnd_toStartOf="@+id/BtnDividCalc"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/BtnRegresarEjer7"
         android:layout_width="238dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="262dp"

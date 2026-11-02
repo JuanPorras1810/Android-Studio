@@ -30,4 +30,39 @@ public class MainActivity extends AppCompatActivity {
         Intent Ejercicio1 = new Intent(MainActivity.this,Ejercicio1Activity.class);
         startActivity(Ejercicio1);
     }
+
+    public void IrEjercicio2(View view){
+        Intent Ejercicio2 = new Intent(MainActivity.this,Ejercicio2Activity.class);
+        startActivity(Ejercicio2);
+    }
+
+    public void IrEjercicio3(View view){
+        Intent Ejercicio3 = new Intent(MainActivity.this,Ejercicio3Activity.class);
+        startActivity(Ejercicio3);
+    }
+
+    public void IrEjercicio4(View view){
+        Intent Ejercicio4 = new Intent(MainActivity.this,Ejercicio4Activity.class);
+        startActivity(Ejercicio4);
+    }
+
+    public void IrEjercicio5(View view){
+        Intent Ejercicio5 = new Intent(MainActivity.this,Ejercicio5Activity.class);
+        startActivity(Ejercicio5);
+    }
+
+    public void IrEjercicio6(View view){
+        Intent Ejercicio6 = new Intent(MainActivity.this,Ejercicio6Activity.class);
+        startActivity(Ejercicio6);
+    }
+
+    public void IrEjercicio7(View view){
+        Intent Ejercicio7 = new Intent(MainActivity.this,Ejercicio7Activity.class);
+        startActivity(Ejercicio7);
+    }
+
+    public void IrEjercicio8(View view){
+        Intent Ejercicio8 = new Intent(MainActivity.this,Ejercicio8Activity.class);
+        startActivity(Ejercicio8);
+    }
 }

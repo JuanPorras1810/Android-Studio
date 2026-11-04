@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "452360168481",
+    "firebase_url": "https://appcolegio3235588-1dd63-default-rtdb.firebaseio.com",
+    "project_id": "appcolegio3235588-1dd63",
+    "storage_bucket": "appcolegio3235588-1dd63.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452360168481:android:b13808283b6b01ea076f60",
+        "android_client_info": {
+          "package_name": "com.jspm.appcolegio3235588"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA99F85qVAu6gFjt40ddhgSxfFbY8T1eZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

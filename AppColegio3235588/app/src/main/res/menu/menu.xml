@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
         android:id="@+id/MnGuardar"
         android:icon="@drawable/ic_save"
@@ -12,7 +11,7 @@
         android:id="@+id/MnActualizar"
         android:icon="@drawable/ic_update"
         android:title="Actualizar"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/MnEliminar"
@@ -25,5 +24,6 @@
         android:icon="@drawable/ic_home"
         android:title="Regresar"
         app:showAsAction="always" />
+
 
 </menu>

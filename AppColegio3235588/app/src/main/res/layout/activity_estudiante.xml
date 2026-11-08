@@ -7,10 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".EstudianteActivity">
 
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/ToolbarEstudiante"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:background="?attr/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +24,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ToolbarEstudiante">
 
         <TextView
-            android:id="@+id/TxtDocEstu"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Documento"
@@ -53,7 +57,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/TxtNombEstu"
+            android:id="@+id/TxtNomEstu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -83,7 +87,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/TxtDireEstu"
+            android:id="@+id/TxtDirEstu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -104,6 +108,23 @@
             android:ems="10"
             android:inputType="phone" />
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Listado estudiantes"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/DatosEstudiante"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

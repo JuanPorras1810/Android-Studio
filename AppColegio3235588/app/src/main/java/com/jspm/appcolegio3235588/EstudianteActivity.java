@@ -135,7 +135,7 @@ public class EstudianteActivity extends AppCompatActivity {
                 TxtDireccion.getText().toString().trim(),
                 TxtTelefono.getText().toString().trim()
         );
-        e.setId(Id);
+        e.setIdEstudiante(Id);
 
         RefEstudiantes.child(Id).setValue(e)
                 .addOnSuccessListener(v -> {
@@ -161,7 +161,7 @@ public class EstudianteActivity extends AppCompatActivity {
                                 ClsEstudiante e = item.getValue(ClsEstudiante.class);
                                 if (e != null){
                                     Datos.add(e);
-                                    Textos.add(e.getDocumentoEstudiante() + " - " + e.getNombreEstudiante());
+                                    Textos.add(e.getDocumentoEstudiante() + " - " + e.getNombreEstudiante() + " - " + e.getApellidoEstudiante() + " - " + e.getDireccionEstudiante() + " - " + e.getTelefonoEstudiante() );
                                 }
                         }
 
@@ -203,7 +203,7 @@ public class EstudianteActivity extends AppCompatActivity {
         if (!Validar()) return;
 
         ClsEstudiante e = new ClsEstudiante(
-                Seleccionado.getId(),
+                Seleccionado.getIdEstudiante(),
                 TxtDocumento.getText().toString().trim(),
                 TxtNombre.getText().toString().trim(),
                 TxtApellido.getText().toString().trim(),
@@ -211,7 +211,7 @@ public class EstudianteActivity extends AppCompatActivity {
                 TxtTelefono.getText().toString().trim()
         );
 
-        RefEstudiantes.child(Seleccionado.getId()).setValue(e)
+        RefEstudiantes.child(Seleccionado.getIdEstudiante()).setValue(e)
                 .addOnSuccessListener(v -> {
                     Toast.makeText(this, "Estudiante actualizado",
                             Toast.LENGTH_SHORT).show();
@@ -229,7 +229,7 @@ public class EstudianteActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return;
         }
-        RefEstudiantes.child(Seleccionado.getId()).removeValue().addOnSuccessListener(v -> {
+        RefEstudiantes.child(Seleccionado.getIdEstudiante()).removeValue().addOnSuccessListener(v -> {
             Toast.makeText(this, "Estudiante eliminado",
                     Toast.LENGTH_SHORT).show();
             Limpiar();

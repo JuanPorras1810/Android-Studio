@@ -24,9 +24,7 @@ public class ClsProfesor {
         this.TituloProfesor = TituloProfesor;
     }
 
-    // Geter and Setters
-
-
+    // Getter and Setters
     public String getDocumentoProfesor() {
         return DocumentoProfesor;
     }

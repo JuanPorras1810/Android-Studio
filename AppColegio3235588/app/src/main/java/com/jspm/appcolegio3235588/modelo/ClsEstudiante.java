@@ -1,7 +1,7 @@
 package com.jspm.appcolegio3235588.modelo;
 
 public class ClsEstudiante {
-    private String Id;
+    private String IdEstudiante;
     private String DocumentoEstudiante;
     private String NombreEstudiante;
     private String ApellidoEstudiante;
@@ -11,8 +11,8 @@ public class ClsEstudiante {
     public ClsEstudiante() {
     }
 
-    public ClsEstudiante(String Id, String DocumentoEstudiante, String NombreEstudiante, String ApellidoEstudiante, String DireccionEstudiante, String TelefonoEstudiante) {
-        this.Id = Id;
+    public ClsEstudiante(String IdEstudiante, String DocumentoEstudiante, String NombreEstudiante, String ApellidoEstudiante, String DireccionEstudiante, String TelefonoEstudiante) {
+        this.IdEstudiante = IdEstudiante;
         this.DocumentoEstudiante = DocumentoEstudiante;
         this.NombreEstudiante = NombreEstudiante;
         this.ApellidoEstudiante = ApellidoEstudiante;
@@ -20,14 +20,14 @@ public class ClsEstudiante {
         this.TelefonoEstudiante = TelefonoEstudiante;
     }
 
-    // Geter and Setters
+    // Getter and Setters
 
-    public String getId() {
-        return Id;
+    public String getIdEstudiante() {
+        return IdEstudiante;
     }
 
-    public void setId(String id) {
-        Id = id;
+    public void setIdEstudiante(String idEstudiante) {
+        IdEstudiante = idEstudiante;
     }
 
     public String getDocumentoEstudiante() {

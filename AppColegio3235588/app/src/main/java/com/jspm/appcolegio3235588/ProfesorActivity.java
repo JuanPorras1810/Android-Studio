@@ -175,7 +175,7 @@ public class ProfesorActivity extends AppCompatActivity {
                             ClsProfesor e = item.getValue(ClsProfesor.class);
                             if (e != null){
                                 Datos.add(e);
-                                Textos.add(e.getDocumentoProfesor() + " - " + e.getNombreProfesor());
+                                Textos.add(e.getDocumentoProfesor() + " - " + e.getNombreProfesor() + " - " + e.getApellidoProfesor() + " - " + e.getDireccionProfesor() + " - " + e.getTelefonoProfesor() + " - " + e.getEmailProfesor() + " - " + e.getTituloProfesor());
                             }
                         }
 

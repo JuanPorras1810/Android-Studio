@@ -125,7 +125,6 @@ public class MateriaActivity extends AppCompatActivity {
                 TxtNombre.getText().toString().trim(),
                 SpGrado.getSelectedItem().toString()
         );
-        m.setIdMateria(Id);
 
         RefMateria.child(Id).setValue(m).addOnSuccessListener(v -> {
             Toast.makeText(this, "Materia guardada",

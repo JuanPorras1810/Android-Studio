@@ -135,7 +135,6 @@ public class EstudianteActivity extends AppCompatActivity {
                 TxtDireccion.getText().toString().trim(),
                 TxtTelefono.getText().toString().trim()
         );
-        e.setIdEstudiante(Id);
 
         RefEstudiantes.child(Id).setValue(e)
                 .addOnSuccessListener(v -> {

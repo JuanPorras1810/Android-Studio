@@ -149,7 +149,6 @@ public class ProfesorActivity extends AppCompatActivity {
                 TxtEmail.getText().toString().trim(),
                 TxtTitulo.getText().toString().trim()
         );
-        e.setIdProfesor(Id);
 
         RefProfesores.child(Id).setValue(e)
                 .addOnSuccessListener(v -> {

@@ -143,7 +143,6 @@ public class AcudienteActivity extends AppCompatActivity {
                 TxtTelefono.getText().toString().trim(),
                 TxtEmail.getText().toString().trim()
         );
-        a.setIdAcudiente(Id);
 
         RefAcudiente.child(Id).setValue(a).addOnSuccessListener(v -> {
             Toast.makeText(this, "Acudiente guardado",

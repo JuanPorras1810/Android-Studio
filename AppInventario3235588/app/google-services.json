@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "805182058396",
+    "firebase_url": "https://appinventario3235588-default-rtdb.firebaseio.com",
+    "project_id": "appinventario3235588",
+    "storage_bucket": "appinventario3235588.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805182058396:android:0e84003056308dec342259",
+        "android_client_info": {
+          "package_name": "com.jspm.appinventario3235588"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4aTmMqCpmQPCS2B4viygpxOtoUnDx89E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

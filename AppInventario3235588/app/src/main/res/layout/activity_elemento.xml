@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElementoActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/ToolbarElemento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Elementos"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarElemento">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Código"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtCodEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Ej. E001"
+                android:inputType="text"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Id Ambiente"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpAmbEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpTipoEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:entries="@array/SpTipoElemento" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpDesEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:entries="@array/SpDescripcionElemento" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Atributos"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtAtrEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Ingrese atributos"
+                android:inputType="text"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtValEle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Ingrese valor"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Elementos Registrados"
+            android:textColor="#1A237E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/DatosElemento"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#D3D3D3"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

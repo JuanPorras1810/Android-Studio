@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">AppInventario3235588</string>
+    <string-array name="SpPiso">
+        <item>Seleccionar...</item>
+        <item>Primero</item>
+        <item>Segundo</item>
+        <item>Tercero</item>
+        <item>Cuarto</item>
+        <item>Quinto</item>
+    </string-array>
+
+    <string-array name="SpTipoElemento">
+        <item>Seleccione...</item>
+        <item>Devolutivo</item>
+        <item>Consumo</item>
+    </string-array>
+
+    <string-array name="SpDescripcionElemento">
+        <item>Seleccione...</item>
+        <item>ARCHIVADOR</item>
+        <item>BASE O SOPORTE</item>
+        <item>CELULAR</item>
+        <item>COMPUTADOR</item>
+        <item>COMPUTADOR PORTATIL</item>
+        <item>CPU INTEGRADA CON MONITOR</item>
+        <item>MESA</item>
+        <item>MONITOR</item>
+        <item>MOUSE</item>
+        <item>SILLA</item>
+        <item>TABLERO</item>
+        <item>TABLET</item>
+        <item>TABLETA DIGITALIZADORA</item>
+        <item>TECLADO</item>
+        <item>TELEFONO</item>
+    </string-array>
+
+    <string-array name="SpRedesInstructor">
+        <item>Seleccione...</item>
+        <item>Red de Comercio y ventas</item>
+        <item>Red de Gestión administrativa y financiera</item>
+        <item>Red de Hotelería y turismo</item>
+        <item>Red de Informática, diseño y desarrollo de software</item>
+        <item>Red de Infraestructura</item>
+        <item>Red de Logística, gestión de la producción</item>
+        <item>Red de Salud</item>
+        <item>Red de Servicios personales</item>
+        <item>Red de Telecomunicaciones</item>
+    </string-array>
+
+    <string-array name="SpTipoNovedad">
+        <item>Seleccione...</item>
+        <item>Daño</item>
+        <item>Traslado</item>
+        <item>Mantenimiento</item>
+    </string-array>
+</resources>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NovedadesActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/ToolbarNovedad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Novedades"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ToolbarNovedad">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtFecNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="DD/MM/AAAA"
+                android:inputType="date"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpTipoNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:entries="@array/SpTipoNovedad" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Descripción"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtDesNov"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:gravity="top|start"
+                android:hint="Ingrese la novedad"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Ambiente"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpAmbNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Elemento"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpEleNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Instructor"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SpInsNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Novedades Registradas"
+            android:textColor="#1A237E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/DatosNovedad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#D3D3D3"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

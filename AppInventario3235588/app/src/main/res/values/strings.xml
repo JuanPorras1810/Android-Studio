@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AppInventario3235588</string>
     <string-array name="SpPiso">
-        <item>Seleccionar...</item>
+        <item>Seleccione...</item>
         <item>Primero</item>
         <item>Segundo</item>
         <item>Tercero</item>

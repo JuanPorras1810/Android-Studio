@@ -1,6 +1,7 @@
 package com.jspm.appinventario3235588;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -33,7 +34,9 @@ import java.util.Locale;
 public class NovedadesActivity extends AppCompatActivity {
 
     // Declaracion de variables
+    private EditText TxtIdNovedad;
     private EditText TxtFecha;
+    private EditText TxtHora;
     private Spinner SpTipo;
     private EditText TxtDescripcion;
     private Spinner SpAmbiente;
@@ -89,7 +92,9 @@ public class NovedadesActivity extends AppCompatActivity {
         });
 
         // Enlace con el activity
+        TxtIdNovedad = findViewById(R.id.TxtIdNov);
         TxtFecha = findViewById(R.id.TxtFecNov);
+        TxtHora = findViewById(R.id.TxtHorNov);
         SpTipo = findViewById(R.id.SpTipoNov);
         TxtDescripcion = findViewById(R.id.TxtDesNov);
         SpAmbiente = findViewById(R.id.SpAmbNov);
@@ -119,24 +124,43 @@ public class NovedadesActivity extends AppCompatActivity {
             Seleccionar(position);
         });
 
+        // Configurar selector de fecha
         TxtFecha.setFocusable(false);
         TxtFecha.setClickable(true);
-
         TxtFecha.setOnClickListener(v -> {
-            Calendar calendar = Calendar.getInstance();
-            int Anio = calendar.get(Calendar.YEAR);
-            int Mes = calendar.get(Calendar.MONTH);
-            int Dia = calendar.get(Calendar.DAY_OF_MONTH);
+            Calendar Calendario = Calendar.getInstance();
+            int Anio = Calendario.get(Calendar.YEAR);
+            int Mes = Calendario.get(Calendar.MONTH);
+            int Dia = Calendario.get(Calendar.DAY_OF_MONTH);
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     NovedadesActivity.this,
                     (view, year, monthOfYear, dayOfMonth) -> {
-                        String fechaFormateada = String.format(Locale.getDefault(), "%02d/%02d/%d", dayOfMonth, (monthOfYear + 1), year);
-                        TxtFecha.setText(fechaFormateada);
+                        String FechaFormateada = String.format(Locale.getDefault(), "%02d/%02d/%d", dayOfMonth, (monthOfYear + 1), year);
+                        TxtFecha.setText(FechaFormateada);
                     },
                     Anio, Mes, Dia
             );
             datePickerDialog.show();
+        });
+
+        // Configurar selector de hora
+        TxtHora.setFocusable(false);
+        TxtHora.setClickable(true);
+        TxtHora.setOnClickListener(v -> {
+            Calendar Calendario = Calendar.getInstance();
+            int Hora = Calendario.get(Calendar.HOUR_OF_DAY);
+            int Minuto = Calendario.get(Calendar.MINUTE);
+
+            TimePickerDialog timePickerDialog = new TimePickerDialog(
+                    NovedadesActivity.this,
+                    (view, hourOfDay, minute) -> {
+                        String HoraFormateada = String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute);
+                        TxtHora.setText(HoraFormateada);
+                    },
+                    Hora, Minuto, true
+            );
+            timePickerDialog.show();
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -145,6 +169,7 @@ public class NovedadesActivity extends AppCompatActivity {
             return insets;
         });
     }
+    // Metodos
     // Metodos
     private void CargarSpinnerAmbientes() {
         RefAmbiente.addValueEventListener(new ValueEventListener() {
@@ -233,10 +258,15 @@ public class NovedadesActivity extends AppCompatActivity {
         });
     }
 
-    // Metodos
     private boolean Validar() {
-        if (TxtFecha.getText().toString().isEmpty()) {
+        if (TxtIdNovedad.getText().toString().isEmpty()) {
+            TxtIdNovedad.setError("Ingrese ID");
+            return false;
+        } else if (TxtFecha.getText().toString().isEmpty()) {
             TxtFecha.setError("Ingrese fecha");
+            return false;
+        } else if (TxtHora.getText().toString().isEmpty()) {
+            TxtHora.setError("Ingrese hora");
             return false;
         } else if (SpTipo.getSelectedItemPosition() <= 0) {
             Toast.makeText(this, "Seleccione un tipo",
@@ -262,7 +292,9 @@ public class NovedadesActivity extends AppCompatActivity {
     }
 
     private void Limpiar() {
+        TxtIdNovedad.setText("");
         TxtFecha.setText("");
+        TxtHora.setText("");
         SpTipo.setSelection(0);
         TxtDescripcion.setText("");
         SpAmbiente.setSelection(0);
@@ -274,11 +306,13 @@ public class NovedadesActivity extends AppCompatActivity {
     private void Guardar() {
         if (!Validar()) return;
 
-        String Id = RefNovedad.push().getKey();
+        String IdKey = RefNovedad.push().getKey();
 
         ClsNovedades n = new ClsNovedades(
-                Id,
+                IdKey,
+                TxtIdNovedad.getText().toString().trim(),
                 TxtFecha.getText().toString().trim(),
+                TxtHora.getText().toString().trim(),
                 SpTipo.getSelectedItem().toString(),
                 TxtDescripcion.getText().toString().trim(),
                 SpAmbiente.getSelectedItem().toString(),
@@ -286,7 +320,7 @@ public class NovedadesActivity extends AppCompatActivity {
                 SpInstructor.getSelectedItem().toString()
         );
 
-        RefNovedad.child(Id).setValue(n).addOnSuccessListener(v -> {
+        RefNovedad.child(IdKey).setValue(n).addOnSuccessListener(v -> {
             Toast.makeText(this, "Novedad guardada",
                     Toast.LENGTH_SHORT).show();
             Limpiar();
@@ -308,7 +342,7 @@ public class NovedadesActivity extends AppCompatActivity {
 
                     if (n != null) {
                         Datos.add(n);
-                        Textos.add(n.getFechaNovedad() + " - " + n.getTipoNovedad() + " - " + n.getDescripcionNovedad());
+                        Textos.add(n.getIdNovedad() + " - " + n.getFechaNovedad() + " " + n.getHoraNovedad() + " - " + n.getTipoNovedad());
                     }
                 }
 
@@ -328,7 +362,9 @@ public class NovedadesActivity extends AppCompatActivity {
     private void Seleccionar(int position) {
         Seleccionado = Datos.get(position);
 
+        TxtIdNovedad.setText(Seleccionado.getIdNovedad());
         TxtFecha.setText(Seleccionado.getFechaNovedad());
+        TxtHora.setText(Seleccionado.getHoraNovedad());
         TxtDescripcion.setText(Seleccionado.getDescripcionNovedad());
 
         for (int i = 0; i < SpTipo.getCount(); i++) {
@@ -373,8 +409,10 @@ public class NovedadesActivity extends AppCompatActivity {
         if (!Validar()) return;
 
         ClsNovedades n = new ClsNovedades(
-                Seleccionado.getIdNovedad(),
+                Seleccionado.getCodigoNovedad(),
+                TxtIdNovedad.getText().toString().trim(),
                 TxtFecha.getText().toString().trim(),
+                TxtHora.getText().toString().trim(),
                 SpTipo.getSelectedItem().toString(),
                 TxtDescripcion.getText().toString().trim(),
                 SpAmbiente.getSelectedItem().toString(),
@@ -382,7 +420,7 @@ public class NovedadesActivity extends AppCompatActivity {
                 SpInstructor.getSelectedItem().toString()
         );
 
-        RefNovedad.child(Seleccionado.getIdNovedad()).setValue(n)
+        RefNovedad.child(Seleccionado.getCodigoNovedad()).setValue(n)
                 .addOnSuccessListener(v -> {
                     Toast.makeText(this, "Novedad actualizada",
                             Toast.LENGTH_SHORT).show();
@@ -401,7 +439,7 @@ public class NovedadesActivity extends AppCompatActivity {
             return;
         }
 
-        RefNovedad.child(Seleccionado.getIdNovedad()).removeValue()
+        RefNovedad.child(Seleccionado.getCodigoNovedad()).removeValue()
                 .addOnSuccessListener(v -> {
                     Toast.makeText(this, "Novedad eliminada",
                             Toast.LENGTH_SHORT).show();

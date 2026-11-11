@@ -28,6 +28,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ToolbarNovedad">
 
+        <!-- 1. Campo ID Novedad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="ID Novedad"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtIdNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Ej. NOV-001"
+                android:inputType="text"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <!-- 2. Campo Fecha -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,6 +82,34 @@
                 android:paddingHorizontal="10dp" />
         </LinearLayout>
 
+        <!-- 3. Campo Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Hora"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/TxtHorNov"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="HH:MM"
+                android:inputType="time"
+                android:paddingHorizontal="10dp" />
+        </LinearLayout>
+
+        <!-- 4. Campo Tipo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,6 +134,7 @@
                 android:entries="@array/SpTipoNovedad" />
         </LinearLayout>
 
+        <!-- 5. Campo Descripción -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,7 +154,7 @@
             <EditText
                 android:id="@+id/TxtDesNov"
                 android:layout_width="0dp"
-                android:layout_height="70dp"
+                android:layout_height="65dp"
                 android:layout_weight="1"
                 android:background="@android:drawable/editbox_background_normal"
                 android:gravity="top|start"
@@ -107,6 +164,7 @@
                 android:padding="10dp" />
         </LinearLayout>
 
+        <!-- 6. Campo Ambiente -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,6 +188,7 @@
                 android:background="@android:drawable/editbox_background_normal" />
         </LinearLayout>
 
+        <!-- 7. Campo Elemento -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -153,10 +212,11 @@
                 android:background="@android:drawable/editbox_background_normal" />
         </LinearLayout>
 
+        <!-- 8. Campo Instructor -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="8dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -180,11 +240,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             android:gravity="center"
             android:text="Novedades Registradas"
             android:textColor="#1A237E"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ListView
@@ -196,5 +256,4 @@
             android:dividerHeight="1dp" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
